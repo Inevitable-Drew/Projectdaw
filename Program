@@ -4,11 +4,11 @@ class SimpleSlotMachine
 {
     static void Main()
     {
-        string[] numbers = { "Cherry", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        string[] numbers = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
         Random random = new Random();
 
         Console.WriteLine("Welcome to the Slot Machine!");
-        Console.WriteLine("Press Enter to spin...");
+        Console.Write("Press Enter to spin: ");
         Console.ReadLine();
 
         string[] result = new string[3];
@@ -23,11 +23,12 @@ class SimpleSlotMachine
 
         if (result[0] == result[1] && result[1] == result[2])
         {
-            Console.WriteLine("JACKPOT! You win!");
+            Console.WriteLine("JACKPOT! You win 100 Pesos!");
         }
         else if (result[0] == result[1] || result[1] == result[2] || result[0] == result[2])
         {
             Console.WriteLine("Nice! You got two of a kind!");
+            Console.WriteLine("You Win 20 Pesos!");
         }
         else
         {
